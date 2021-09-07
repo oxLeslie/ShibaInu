@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		313C0B3326E71C3400696B86 /* ShibaInu.h in Headers */ = {isa = PBXBuildFile; fileRef = 313C0B3126E71C3400696B86 /* ShibaInu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		313C0B3B26E722D500696B86 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313C0B3A26E722D500696B86 /* Command.swift */; };
+		313C0B4026E72F2C00696B86 /* Throws.h in Headers */ = {isa = PBXBuildFile; fileRef = 313C0B3E26E72F2C00696B86 /* Throws.h */; };
+		313C0B4226E72F9D00696B86 /* OCThrows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313C0B4126E72F9D00696B86 /* OCThrows.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		313C0B2E26E71C3400696B86 /* ShibaInu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShibaInu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		313C0B3126E71C3400696B86 /* ShibaInu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShibaInu.h; sourceTree = "<group>"; };
 		313C0B3226E71C3400696B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		313C0B3A26E722D500696B86 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		313C0B3E26E72F2C00696B86 /* Throws.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Throws.h; sourceTree = "<group>"; };
+		313C0B3F26E72F2C00696B86 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		313C0B4126E72F9D00696B86 /* OCThrows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCThrows.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +53,38 @@
 		313C0B3026E71C3400696B86 /* ShibaInu */ = {
 			isa = PBXGroup;
 			children = (
+				313C0B3D26E72F1B00696B86 /* ObjC */,
+				313C0B3C26E72F1400696B86 /* Helper */,
+				313C0B3926E722AE00696B86 /* Command */,
 				313C0B3126E71C3400696B86 /* ShibaInu.h */,
 				313C0B3226E71C3400696B86 /* Info.plist */,
 			);
 			path = ShibaInu;
+			sourceTree = "<group>";
+		};
+		313C0B3926E722AE00696B86 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				313C0B3A26E722D500696B86 /* Command.swift */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		313C0B3C26E72F1400696B86 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				313C0B4126E72F9D00696B86 /* OCThrows.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		313C0B3D26E72F1B00696B86 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				313C0B3F26E72F2C00696B86 /* module.modulemap */,
+				313C0B3E26E72F2C00696B86 /* Throws.h */,
+			);
+			path = ObjC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				313C0B3326E71C3400696B86 /* ShibaInu.h in Headers */,
+				313C0B4026E72F2C00696B86 /* Throws.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +130,7 @@
 				TargetAttributes = {
 					313C0B2D26E71C3400696B86 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -130,6 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				313C0B4226E72F9D00696B86 /* OCThrows.swift in Sources */,
+				313C0B3B26E722D500696B86 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +299,7 @@
 		313C0B3726E71C3400696B86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -276,6 +316,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oxLeslie.ShibaInu;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/$(SWIFT_MODULE_NAME)/ObjC";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -283,6 +325,7 @@
 		313C0B3826E71C3400696B86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -299,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oxLeslie.ShibaInu;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/$(SWIFT_MODULE_NAME)/ObjC";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

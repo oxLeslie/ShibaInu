@@ -1,0 +1,4 @@
+module ObjC {
+    header "Throws.h"
+    export *
+}
