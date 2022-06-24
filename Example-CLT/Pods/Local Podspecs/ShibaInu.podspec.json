@@ -1,0 +1,28 @@
+{
+  "name": "ShibaInu",
+  "version": "0.1.0",
+  "summary": "A short description of ShibaInu.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/oxleslie/ShibaInu",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "oxleslie": "oxleslie@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/oxleslie/ShibaInu.git",
+    "tag": "0.1.0"
+  },
+  "static_framework": true,
+  "pod_target_xcconfig": {
+    "SWIFT_INCLUDE_PATHS": "${PODS_TARGET_SRCROOT}/ShibaInu/Classes/Utilities/ObjC"
+  },
+  "platforms": {
+    "osx": "10.10"
+  },
+  "source_files": "ShibaInu/Classes/**/*",
+  "exclude_files": "ShibaInu/Classes/**/module.modulemap",
+  "private_header_files": "ShibaInu/Classes/Utilities/ObjC/*.h"
+}

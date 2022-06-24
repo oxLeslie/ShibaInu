@@ -1,0 +1,16 @@
+PODS:
+  - ShibaInu (0.1.0)
+
+DEPENDENCIES:
+  - ShibaInu (from `../`)
+
+EXTERNAL SOURCES:
+  ShibaInu:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ShibaInu: 18af4ab3be59c97192b5ebf13f7d87aaf0febadf
+
+PODFILE CHECKSUM: ce091d7f686373ec2805ab67bf067cf961adef92
+
+COCOAPODS: 1.11.2

@@ -1,0 +1,6 @@
+framework module ShibaInu {
+  umbrella header "ShibaInu-umbrella.h"
+
+  export *
+  module * { export * }
+}

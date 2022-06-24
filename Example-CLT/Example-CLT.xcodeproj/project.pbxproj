@@ -7,134 +7,122 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		313C0B3326E71C3400696B86 /* ShibaInu.h in Headers */ = {isa = PBXBuildFile; fileRef = 313C0B3126E71C3400696B86 /* ShibaInu.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		313C0B3B26E722D500696B86 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313C0B3A26E722D500696B86 /* Command.swift */; };
-		313C0B4026E72F2C00696B86 /* Throws.h in Headers */ = {isa = PBXBuildFile; fileRef = 313C0B3E26E72F2C00696B86 /* Throws.h */; };
-		313C0B4226E72F9D00696B86 /* OCThrows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313C0B4126E72F9D00696B86 /* OCThrows.swift */; };
+		3138E3CA280D420A009356FA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3138E3C9280D420A009356FA /* main.swift */; };
+		73AE9A7431BC64065AE40463 /* Pods_Example_CLT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FBAFD753125431322CD3F8 /* Pods_Example_CLT.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3138E3C4280D420A009356FA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		313C0B2E26E71C3400696B86 /* ShibaInu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShibaInu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		313C0B3126E71C3400696B86 /* ShibaInu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShibaInu.h; sourceTree = "<group>"; };
-		313C0B3226E71C3400696B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		313C0B3A26E722D500696B86 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		313C0B3E26E72F2C00696B86 /* Throws.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Throws.h; sourceTree = "<group>"; };
-		313C0B3F26E72F2C00696B86 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		313C0B4126E72F9D00696B86 /* OCThrows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCThrows.swift; sourceTree = "<group>"; };
+		3138E3C6280D420A009356FA /* Example-CLT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Example-CLT"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3138E3C9280D420A009356FA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3138EB0697D235414DADFD30 /* Pods-Example-CLT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-CLT.debug.xcconfig"; path = "Target Support Files/Pods-Example-CLT/Pods-Example-CLT.debug.xcconfig"; sourceTree = "<group>"; };
+		6D722FAE4E1F940E19C16C54 /* Pods-Example-CLT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-CLT.release.xcconfig"; path = "Target Support Files/Pods-Example-CLT/Pods-Example-CLT.release.xcconfig"; sourceTree = "<group>"; };
+		F9FBAFD753125431322CD3F8 /* Pods_Example_CLT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_CLT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		313C0B2B26E71C3400696B86 /* Frameworks */ = {
+		3138E3C3280D420A009356FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AE9A7431BC64065AE40463 /* Pods_Example_CLT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		313C0B2426E71C3400696B86 = {
+		3138E3BD280D420A009356FA = {
 			isa = PBXGroup;
 			children = (
-				313C0B3026E71C3400696B86 /* ShibaInu */,
-				313C0B2F26E71C3400696B86 /* Products */,
+				3138E3C8280D420A009356FA /* Example-CLT */,
+				3138E3C7280D420A009356FA /* Products */,
+				E5B445C458A709262F39AB88 /* Pods */,
+				CA4423A1F54726E215F6B1B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		313C0B2F26E71C3400696B86 /* Products */ = {
+		3138E3C7280D420A009356FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				313C0B2E26E71C3400696B86 /* ShibaInu.framework */,
+				3138E3C6280D420A009356FA /* Example-CLT */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		313C0B3026E71C3400696B86 /* ShibaInu */ = {
+		3138E3C8280D420A009356FA /* Example-CLT */ = {
 			isa = PBXGroup;
 			children = (
-				313C0B3D26E72F1B00696B86 /* ObjC */,
-				313C0B3C26E72F1400696B86 /* Helper */,
-				313C0B3926E722AE00696B86 /* Command */,
-				313C0B3126E71C3400696B86 /* ShibaInu.h */,
-				313C0B3226E71C3400696B86 /* Info.plist */,
+				3138E3C9280D420A009356FA /* main.swift */,
 			);
-			path = ShibaInu;
+			path = "Example-CLT";
 			sourceTree = "<group>";
 		};
-		313C0B3926E722AE00696B86 /* Command */ = {
+		CA4423A1F54726E215F6B1B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				313C0B3A26E722D500696B86 /* Command.swift */,
+				F9FBAFD753125431322CD3F8 /* Pods_Example_CLT.framework */,
 			);
-			path = Command;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		313C0B3C26E72F1400696B86 /* Helper */ = {
+		E5B445C458A709262F39AB88 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				313C0B4126E72F9D00696B86 /* OCThrows.swift */,
+				3138EB0697D235414DADFD30 /* Pods-Example-CLT.debug.xcconfig */,
+				6D722FAE4E1F940E19C16C54 /* Pods-Example-CLT.release.xcconfig */,
 			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		313C0B3D26E72F1B00696B86 /* ObjC */ = {
-			isa = PBXGroup;
-			children = (
-				313C0B3F26E72F2C00696B86 /* module.modulemap */,
-				313C0B3E26E72F2C00696B86 /* Throws.h */,
-			);
-			path = ObjC;
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		313C0B2926E71C3400696B86 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				313C0B3326E71C3400696B86 /* ShibaInu.h in Headers */,
-				313C0B4026E72F2C00696B86 /* Throws.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		313C0B2D26E71C3400696B86 /* ShibaInu */ = {
+		3138E3C5280D420A009356FA /* Example-CLT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 313C0B3626E71C3400696B86 /* Build configuration list for PBXNativeTarget "ShibaInu" */;
+			buildConfigurationList = 3138E3CD280D420A009356FA /* Build configuration list for PBXNativeTarget "Example-CLT" */;
 			buildPhases = (
-				313C0B2926E71C3400696B86 /* Headers */,
-				313C0B2A26E71C3400696B86 /* Sources */,
-				313C0B2B26E71C3400696B86 /* Frameworks */,
-				313C0B2C26E71C3400696B86 /* Resources */,
+				16ACB4230E778A10C8C76ABF /* [CP] Check Pods Manifest.lock */,
+				3138E3C2280D420A009356FA /* Sources */,
+				3138E3C3280D420A009356FA /* Frameworks */,
+				3138E3C4280D420A009356FA /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ShibaInu;
-			productName = ShibaInu;
-			productReference = 313C0B2E26E71C3400696B86 /* ShibaInu.framework */;
-			productType = "com.apple.product-type.framework";
+			name = "Example-CLT";
+			productName = "Example-CLT";
+			productReference = 3138E3C6280D420A009356FA /* Example-CLT */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		313C0B2526E71C3400696B86 /* Project object */ = {
+		3138E3BE280D420A009356FA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					313C0B2D26E71C3400696B86 = {
+					3138E3C5280D420A009356FA = {
 						CreatedOnToolsVersion = 12.5.1;
-						LastSwiftMigration = 1250;
 					};
 				};
 			};
-			buildConfigurationList = 313C0B2826E71C3400696B86 /* Build configuration list for PBXProject "ShibaInu" */;
+			buildConfigurationList = 3138E3C1280D420A009356FA /* Build configuration list for PBXProject "Example-CLT" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,40 +130,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 313C0B2426E71C3400696B86;
-			productRefGroup = 313C0B2F26E71C3400696B86 /* Products */;
+			mainGroup = 3138E3BD280D420A009356FA;
+			productRefGroup = 3138E3C7280D420A009356FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				313C0B2D26E71C3400696B86 /* ShibaInu */,
+				3138E3C5280D420A009356FA /* Example-CLT */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		313C0B2C26E71C3400696B86 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		16ACB4230E778A10C8C76ABF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-CLT-checkManifestLockResult.txt",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		313C0B2A26E71C3400696B86 /* Sources */ = {
+		3138E3C2280D420A009356FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				313C0B4226E72F9D00696B86 /* OCThrows.swift in Sources */,
-				313C0B3B26E722D500696B86 /* Command.swift in Sources */,
+				3138E3CA280D420A009356FA /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		313C0B3426E71C3400696B86 /* Debug */ = {
+		3138E3CB280D420A009356FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -209,7 +211,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -234,12 +235,10 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		313C0B3526E71C3400696B86 /* Release */ = {
+		3138E3CC280D420A009356FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,7 +272,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -291,58 +289,29 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		313C0B3726E71C3400696B86 /* Debug */ = {
+		3138E3CE280D420A009356FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3138EB0697D235414DADFD30 /* Pods-Example-CLT.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ShibaInu/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.oxLeslie.ShibaInu;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/$(SWIFT_MODULE_NAME)/ObjC";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEVELOPMENT_TEAM = VF585VWLRH;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		313C0B3826E71C3400696B86 /* Release */ = {
+		3138E3CF280D420A009356FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D722FAE4E1F940E19C16C54 /* Pods-Example-CLT.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ShibaInu/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.oxLeslie.ShibaInu;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/$(SWIFT_MODULE_NAME)/ObjC";
+				DEVELOPMENT_TEAM = VF585VWLRH;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -350,25 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		313C0B2826E71C3400696B86 /* Build configuration list for PBXProject "ShibaInu" */ = {
+		3138E3C1280D420A009356FA /* Build configuration list for PBXProject "Example-CLT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				313C0B3426E71C3400696B86 /* Debug */,
-				313C0B3526E71C3400696B86 /* Release */,
+				3138E3CB280D420A009356FA /* Debug */,
+				3138E3CC280D420A009356FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		313C0B3626E71C3400696B86 /* Build configuration list for PBXNativeTarget "ShibaInu" */ = {
+		3138E3CD280D420A009356FA /* Build configuration list for PBXNativeTarget "Example-CLT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				313C0B3726E71C3400696B86 /* Debug */,
-				313C0B3826E71C3400696B86 /* Release */,
+				3138E3CE280D420A009356FA /* Debug */,
+				3138E3CF280D420A009356FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 313C0B2526E71C3400696B86 /* Project object */;
+	rootObject = 3138E3BE280D420A009356FA /* Project object */;
 }
