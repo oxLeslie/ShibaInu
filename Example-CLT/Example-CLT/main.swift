@@ -9,3 +9,11 @@ import Foundation
 import ShibaInu
 
 print("Hello, World!")
+
+var greeting = "Hello, playground"
+
+let xxx = try greeting.inu.matching("lo")
+print(xxx)
+
+let rrr = Search.engine.in("/Users/zqiu/Desktop/SymbolSama.File").query(extension: ".icns").results
+print(rrr)

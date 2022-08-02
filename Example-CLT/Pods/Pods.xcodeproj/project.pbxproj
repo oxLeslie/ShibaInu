@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D39A909229E5FC9852AC9E73A0DD59F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
 		2BBEB90D4F4D86A8FEDDD0D64C7A9F24 /* ShibaInu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E15446D6FD88C725951012DCF13C6D4C /* ShibaInu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31AC028728990849002DC672 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AC028628990849002DC672 /* Search.swift */; };
+		31AE4EF52893DE40005D8C6D /* Search+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE4EF42893DE40005D8C6D /* Search+File.swift */; };
 		3D8BC1F03F0B54A7B4432A8BE110043E /* Pods-Example-CLT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E720EB2809ACD0A6A5E4D7FAEB246300 /* Pods-Example-CLT-dummy.m */; };
 		41086FB027F0CBFB8D185D6155DE65C4 /* Inu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F13D7B0208AA12F7E20F4D074AAD10 /* Inu.swift */; };
 		42FC3259F402C02227CF97D71CEF69E1 /* Inu+Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB5732A0C82DECDC1BA3DECE7C6DF20 /* Inu+Pattern.swift */; };
@@ -40,12 +42,14 @@
 		164A235BB3791047EB656CD14E7896CD /* Inu+Float.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Inu+Float.swift"; sourceTree = "<group>"; };
 		1EE12249E493B86F5B3252951B57CCC9 /* Pods-Example-CLT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-CLT.debug.xcconfig"; sourceTree = "<group>"; };
 		1F1972134050264E1278F06ADA656612 /* Pods-Example-CLT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example-CLT.modulemap"; sourceTree = "<group>"; };
-		207E443F8431F6AB4C689BBE420CAB29 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		207E443F8431F6AB4C689BBE420CAB29 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		22206B589874B115D684F4DB1B080A92 /* Interface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 		2AD9C540160426997D731D1F57DED865 /* Pods-Example-CLT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-CLT.release.xcconfig"; sourceTree = "<group>"; };
 		3031C245C7565915885D997C7DD34745 /* Inu+Cmd.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Inu+Cmd.swift"; sourceTree = "<group>"; };
+		31AC028628990849002DC672 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		31AE4EF42893DE40005D8C6D /* Search+File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search+File.swift"; sourceTree = "<group>"; };
 		55F004FC06260CF18DEA493AF0D14CDC /* IConstructor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IConstructor.swift; sourceTree = "<group>"; };
-		602E48E96057B1B332067DD8D00D393F /* ShibaInu.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ShibaInu.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		602E48E96057B1B332067DD8D00D393F /* ShibaInu.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ShibaInu.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6A66BFB0F540EDDC7C8F06F2FF03E6A1 /* Command.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		701F3EA8DF175547068EB6D1C064F7C1 /* Pods-Example-CLT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-CLT-Info.plist"; sourceTree = "<group>"; };
 		7A1BE3CE8845982A6E1406CE31731246 /* OCThrows.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OCThrows.swift; sourceTree = "<group>"; };
@@ -56,8 +60,8 @@
 		92400F87D04B1103802519884A268F67 /* Pods-Example-CLT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-CLT-umbrella.h"; sourceTree = "<group>"; };
 		92F13D7B0208AA12F7E20F4D074AAD10 /* Inu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Inu.swift; sourceTree = "<group>"; };
 		9686875C60B3C34E951B9244D7D7A2DD /* ShibaInu */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ShibaInu; path = ShibaInu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AD84845D97681393E9A4950C9C26513C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AD84845D97681393E9A4950C9C26513C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BA10399D3C801DBEAB3B9E411895E13C /* ShibaInu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ShibaInu.release.xcconfig; sourceTree = "<group>"; };
 		C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		C69111E27EA6713C3394AF1F540735DD /* Pods-Example-CLT-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-CLT-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -105,19 +109,7 @@
 			children = (
 				82EB44DBBC7D33B900F1CBADC968C594 /* Throws.h */,
 			);
-			name = ObjC;
 			path = ObjC;
-			sourceTree = "<group>";
-		};
-		0FCAA73127E15A032CCEBF9265D596E9 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				3031C245C7565915885D997C7DD34745 /* Inu+Cmd.swift */,
-				164A235BB3791047EB656CD14E7896CD /* Inu+Float.swift */,
-				7CB5732A0C82DECDC1BA3DECE7C6DF20 /* Inu+Pattern.swift */,
-			);
-			name = Extension;
-			path = ShibaInu/Classes/Extension;
 			sourceTree = "<group>";
 		};
 		22F3DFB303BBB12704D3557378835178 /* Utilities */ = {
@@ -129,6 +121,28 @@
 			);
 			name = Utilities;
 			path = ShibaInu/Classes/Utilities;
+			sourceTree = "<group>";
+		};
+		31AE4EF12893D090005D8C6D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				31AC028628990849002DC672 /* Search.swift */,
+				31AE4EF42893DE40005D8C6D /* Search+File.swift */,
+			);
+			name = Search;
+			path = ShibaInu/Classes/Search;
+			sourceTree = "<group>";
+		};
+		31AE4EFA2893F728005D8C6D /* Inu */ = {
+			isa = PBXGroup;
+			children = (
+				92F13D7B0208AA12F7E20F4D074AAD10 /* Inu.swift */,
+				3031C245C7565915885D997C7DD34745 /* Inu+Cmd.swift */,
+				164A235BB3791047EB656CD14E7896CD /* Inu+Float.swift */,
+				7CB5732A0C82DECDC1BA3DECE7C6DF20 /* Inu+Pattern.swift */,
+			);
+			name = Inu;
+			path = ShibaInu/Classes/Inu;
 			sourceTree = "<group>";
 		};
 		374E41E63A0A957E28F8D0E2986476E7 /* Command */ = {
@@ -145,9 +159,10 @@
 			isa = PBXGroup;
 			children = (
 				374E41E63A0A957E28F8D0E2986476E7 /* Command */,
-				0FCAA73127E15A032CCEBF9265D596E9 /* Extension */,
+				31AE4EFA2893F728005D8C6D /* Inu */,
 				D6F05909388A91F91F4355B6C3B143B6 /* Interface */,
 				08C0CEEBCC4D79213452EF5FF21296C1 /* Pod */,
+				31AE4EF12893D090005D8C6D /* Search */,
 				C39B9736E277B4D0BB3682DD788983F8 /* Support Files */,
 				22F3DFB303BBB12704D3557378835178 /* Utilities */,
 			);
@@ -226,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				22206B589874B115D684F4DB1B080A92 /* Interface.swift */,
-				92F13D7B0208AA12F7E20F4D074AAD10 /* Inu.swift */,
 			);
 			name = Interface;
 			path = ShibaInu/Classes/Interface;
@@ -375,6 +389,8 @@
 				94C07E5821018AADBFF18C6801FD4C52 /* Inu+Float.swift in Sources */,
 				42FC3259F402C02227CF97D71CEF69E1 /* Inu+Pattern.swift in Sources */,
 				B634CD5B67316AAB49B48129E91F6BA9 /* OCThrows.swift in Sources */,
+				31AC028728990849002DC672 /* Search.swift in Sources */,
+				31AE4EF52893DE40005D8C6D /* Search+File.swift in Sources */,
 				CF0C55A4EA280E8FD337C5CC779F3D6F /* ShibaInu-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

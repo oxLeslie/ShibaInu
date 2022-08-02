@@ -24,3 +24,23 @@ public protocol IResult {
     var success: String? { get }
     var failure: String? { get }
 }
+
+public protocol ISearch {
+    // 搜索结果
+    var results: [String] { get }
+    
+    // 对结果排序
+    func sorted() -> Self
+    
+    /// 是否<递归>搜索
+    func recursive(_ isRecursive: Bool) -> Self
+    
+    /// 在<目标目录>搜索
+    func `in`(_ directory: String) -> Self
+    
+    /// 根据<文件名称>搜索
+    func query(name: String) -> Self
+    
+    /// 根据<文件类型>搜索
+    func query(extension: String) -> Self
+}
