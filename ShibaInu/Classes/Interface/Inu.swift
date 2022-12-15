@@ -12,17 +12,25 @@ public struct Inu<T> {
     let arg: T
 }
 
+// MARK: - Extension
+
 public extension Float {
     
-    var inu: Inu<Self> { Inu(arg: self) }
+    var inu: Inu<Self> {
+        Inu(arg: self)
+    }
 }
 
 public extension Double {
     
-    var inu: Inu<Self> { Inu(arg: self) }
+    var inu: Inu<Self> {
+        Inu(arg: self)
+    }
 }
 
 public extension String {
     
-    var inu: Inu<Self> { Inu(arg: self) }
+    var inu: Inu<Self> {
+        Inu(arg: self)
+    }
 }

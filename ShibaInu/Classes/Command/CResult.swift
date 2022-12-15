@@ -12,10 +12,7 @@ struct CResult: IResult {
     let success: String?
     let failure: String?
     
-    init(
-        success: String? = nil,
-        failure: String? = nil
-    ) {
+    init(success: String? = nil, failure: String? = nil) {
         self.success = success
         self.failure = failure
     }
