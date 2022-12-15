@@ -37,4 +37,8 @@ TODO: Add long description of the pod here.
   s.source_files  = 'ShibaInu/Classes/**/*'
   s.exclude_files = 'ShibaInu/Classes/**/module.modulemap'
   s.private_header_files = 'ShibaInu/Classes/Utilities/ObjC/*.h'
+
+  # s.resource_bundles = {
+  #   'ShibaInu' => ['ShibaInu/Assets/*.png']
+  # }
 end
