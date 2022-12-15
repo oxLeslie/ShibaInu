@@ -2,11 +2,11 @@
 platform :osx, '11.0'
 install! "cocoapods", :preserve_pod_file_structure => true
 
-target 'Example-CLT' do
+target 'ShibaInu-CLT' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Example
+  # Pods for ShibaInu-CLT
   pod 'ShibaInu', :path => '../'
 
 end

@@ -1,8 +1,8 @@
 //
 //  main.swift
-//  Example-CLT
+//  ShibaInu-CLT
 //
-//  Created by zQiu on 2022/4/18.
+//  Created by 秋雨寒 on 2022/12/15.
 //
 
 import Foundation
@@ -17,3 +17,4 @@ print(xxx)
 
 let rrr = InuSearch.in("/Users/zqiu/Desktop/SymbolSama.File").query(extension: ".icns").result()
 print(rrr)
+

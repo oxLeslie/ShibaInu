@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Example_CLTVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Example_CLTVersionString[];
+FOUNDATION_EXPORT double Pods_ShibaInu_CLTVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_ShibaInu_CLTVersionString[];
 
