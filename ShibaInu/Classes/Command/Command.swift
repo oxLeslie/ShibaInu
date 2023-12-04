@@ -9,18 +9,17 @@ import Foundation
 
 struct Command: ICommander {
     
-    var path: String?
-    var args: [String]?
-    var workSpace: String?
+    let path: String?
     
-    private var envs: [String: String] {
+    let args: [String]?
+    
+    let workSpace: String?
+    
+    var envs: [String: String] {
         var environment = ProcessInfo.processInfo.environment
         environment["PATH"] = "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
         return environment
     }
-}
-
-extension Command {
     
     func sync() -> IResult {
         let _workSpace = getcwd(nil, 0)
@@ -30,30 +29,28 @@ extension Command {
         let output = Pipe()
         let error  = Pipe()
         
-        let p = Process {
-            $0.launchPath  = path
-            $0.arguments   = args
-            $0.environment = envs
-            
-            $0.standardOutput = output
-            $0.standardError  = error
-        }
+        let process = Process()
+        process.launchPath     = self.path
+        process.arguments      = self.args
+        process.environment    = self.envs
+        process.standardOutput = output
+        process.standardError  = error
         
         do {
             try OCTry {
-                p.launch()
-                p.waitUntilExit()
+                process.launch()
+                process.waitUntilExit()
             }
         } catch {
-            return CResult(failure: error.localizedDescription)
+            return CmdResult(failure: error.localizedDescription)
         }
         
-        if p.terminationStatus == 0 {
+        if process.terminationStatus == 0 {
             let d = output.fileHandleForReading.readDataToEndOfFile()
-            return CResult(success: String(data: d, encoding: .utf8))
+            return CmdResult(success: String(data: d, encoding: .utf8))
         } else {
             let d = error.fileHandleForReading.readDataToEndOfFile()
-            return CResult(failure: String(data: d, encoding: .utf8))
+            return CmdResult(failure: String(data: d, encoding: .utf8))
         }
     }
     
@@ -62,26 +59,28 @@ extension Command {
             let _workSpace = getcwd(nil, 0)
             chdir((self.workSpace as NSString?)?.fileSystemRepresentation)
             
-            let output = Pipe {
-                $0.fileHandleForReading.waitForDataInBackgroundAndNotify()
-            }
+            let output = Pipe()
+            output.fileHandleForReading.waitForDataInBackgroundAndNotify()
             
-            let process = Process {
-                $0.launchPath  = self.path
-                $0.arguments   = self.args
-                $0.environment = self.envs
-                $0.standardOutput = output
-                
-                $0.terminationHandler = { _p in
-                    chdir(_workSpace)
-                    DispatchQueue.main.async {
-                        termination(_p.terminationStatus)
-                    }
+            let process = Process()
+            process.launchPath         = self.path
+            process.arguments          = self.args
+            process.environment        = self.envs
+            process.standardOutput     = output
+            process.terminationHandler = { _p in
+                chdir(_workSpace)
+                DispatchQueue.main.async {
+                    termination(_p.terminationStatus)
                 }
             }
             
-            NotificationCenter.default.addObserver(forName: .NSFileHandleDataAvailable, object: output.fileHandleForReading, queue: nil) {
-                guard let handle = $0.object as? FileHandle, !handle.availableData.isEmpty else {
+            NotificationCenter.default.addObserver(
+                forName: .NSFileHandleDataAvailable,
+                object: output.fileHandleForReading, queue: nil)
+            {
+                guard let handle = $0.object as? FileHandle,
+                      !handle.availableData.isEmpty else
+                {
                     output.fileHandleForReading.closeFile()
                     return
                 }

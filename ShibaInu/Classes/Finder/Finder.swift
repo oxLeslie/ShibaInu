@@ -1,99 +1,81 @@
 //
-//  Search.swift
+//  Finder.swift
 //  ShibaInu
 //
-//  Created by 秋雨寒 on 2022/8/2.
+//  Created by zQiu on 2023/12/4.
 //
 
 import Foundation
 
-class Search {
+class Finder: IFinder {
     
     var directory: String?
-    var isRecursive: Bool = false
-    var results: [String] = []
-}
-
-extension Search: ISearch {
+    
+    private var _isRecursive: Bool = false
+    
+    private var _result: [String] = []
     
     func result() -> [String] {
-        results
+        _result
     }
     
     func sorted() -> Self {
-        results.sort(by: {
-            $0.caseInsensitiveCompare($1) == .orderedDescending
-        })
+        _result.sort { lhs, rhs in
+            lhs.caseInsensitiveCompare(rhs) == .orderedDescending
+        }
         return self
     }
     
     func recursive(_ isRecursive: Bool) -> Self {
-        self.isRecursive = isRecursive
-        return self
-    }
-    
-    func `in`(_ directory: String) -> Self {
-        self.directory = directory
+        _isRecursive = isRecursive
         return self
     }
     
     func query(name: String) -> Self {
-        let _name = name.lowercased()
-        
-        results = enumerator?.compactMap({
+        let str = name.lowercased()
+        _result = enumerator()?.compactMap({
             if let url = $0 as? URL,
-               url.lastPathComponent.lowercased() == _name
+               url.lastPathComponent.lowercased() == str
             {
                 return url.path
             } else {
                 return nil
             }
         }) ?? []
-        
         return self
     }
     
     func query(extension: String) -> Self {
-        let _name = `extension`
+        let str = `extension`
             .trimmingCharacters(in: CharacterSet(charactersIn: "."))
             .lowercased()
-        
-        results = enumerator?.compactMap({ url in
+        _result = enumerator()?.compactMap({ url in
             if let url = url as? URL,
-               url.pathExtension.lowercased() == _name
+               url.pathExtension.lowercased() == str
             {
                 return url.path
             } else {
                 return nil
             }
         }) ?? []
-        
         return self
     }
-}
-
-private extension Search {
     
-    var enumerator: FileManager.DirectoryEnumerator? {
+    private func enumerator() ->FileManager.DirectoryEnumerator? {
         var url = URL(fileURLWithPath: "/")
-        
         if let directory = directory {
             url = URL(fileURLWithPath: (directory as NSString).expandingTildeInPath)
         }
-
         var options: FileManager.DirectoryEnumerationOptions = [
             .skipsHiddenFiles
         ]
-        
-        if !isRecursive {
+        if !_isRecursive {
             options.formUnion(.skipsSubdirectoryDescendants)
         }
-
         return FileManager.default.enumerator(
             at: url,
             includingPropertiesForKeys: nil,
             options: options,
-            errorHandler: nil
-        )
+            errorHandler: nil)
     }
 }

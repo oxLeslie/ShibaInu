@@ -25,18 +25,17 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'oxleslie' => 'oxleslie@qq.com' }
   s.source           = { :git => 'https://github.com/oxleslie/ShibaInu.git', :tag => s.version.to_s }
-  
-  s.static_framework = true
 
-  # s.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => ['${PODS_ROOT}/ShibaInu/Classes/Utilities/ObjC'] }
-  s.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/ShibaInu/Classes/Utilities/ObjC' }
+  # s.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => ['${PODS_ROOT}/ShibaInu/Classes/Utils/ObjC'] }
+  s.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/ShibaInu/Classes/Utils/ObjC' }
 
   s.platform = :osx
   s.osx.deployment_target = "10.10"
+  s.static_framework = true
 
   s.source_files  = 'ShibaInu/Classes/**/*'
   s.exclude_files = 'ShibaInu/Classes/**/module.modulemap'
-  s.private_header_files = 'ShibaInu/Classes/Utilities/ObjC/*.h'
+  s.private_header_files = 'ShibaInu/Classes/Utils/ObjC/*.h'
 
   # s.resource_bundles = {
   #   'ShibaInu' => ['ShibaInu/Assets/*.png']

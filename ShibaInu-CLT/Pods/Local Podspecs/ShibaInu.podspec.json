@@ -15,14 +15,14 @@
     "git": "https://github.com/oxleslie/ShibaInu.git",
     "tag": "0.1.0"
   },
-  "static_framework": true,
   "pod_target_xcconfig": {
-    "SWIFT_INCLUDE_PATHS": "${PODS_TARGET_SRCROOT}/ShibaInu/Classes/Utilities/ObjC"
+    "SWIFT_INCLUDE_PATHS": "${PODS_TARGET_SRCROOT}/ShibaInu/Classes/Utils/ObjC"
   },
   "platforms": {
     "osx": "10.10"
   },
+  "static_framework": true,
   "source_files": "ShibaInu/Classes/**/*",
   "exclude_files": "ShibaInu/Classes/**/module.modulemap",
-  "private_header_files": "ShibaInu/Classes/Utilities/ObjC/*.h"
+  "private_header_files": "ShibaInu/Classes/Utils/ObjC/*.h"
 }

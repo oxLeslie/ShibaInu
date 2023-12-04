@@ -15,6 +15,6 @@ var greeting = "Hello, playground"
 let xxx = try greeting.inu.matching("lo")
 print(xxx)
 
-let rrr = InuSearch.in("/Users/zqiu/Desktop/SymbolSama.File").query(extension: ".icns").result()
+let rrr = "/Users/zqiu/Desktop/SymbolSama.File".inu.fnd.query(extension: ".icns").result()
 print(rrr)
 

@@ -15,8 +15,8 @@ public extension Inu where T == String {
     {
         try multimatching(
             pattern,
-            options: options
-        ).flatMap {
+            options: options)
+        .flatMap {
             $0
         }
     }
@@ -27,18 +27,20 @@ public extension Inu where T == String {
     {
         try expression(
             pattern,
-            options: options
-        ).compactMap { o in
+            options: options)
+        .compactMap { o in
             let c = o.numberOfRanges
             let s = c == 1 ? 0 : 1
             let e = max(s, c)
-            return (s..<e).compactMap { i in
+            let r: [String] = (s..<e).compactMap { i in
                 guard let range = Range<String.Index>(
                     o.range(at: i),
-                    in: arg
-                ) else { return nil }
+                    in: arg) else {
+                    return nil
+                }
                 return String(arg[range])
             }
+            return r
         }
     }
     
@@ -48,11 +50,10 @@ public extension Inu where T == String {
     {
         try NSRegularExpression(
             pattern: pattern,
-            options: options
-        ).matches(
+            options: options)
+        .matches(
             in: arg,
             options: [],
-            range: NSRange(arg.startIndex..., in: arg)
-        )
+            range: NSRange(arg.startIndex..., in: arg))
     }
 }

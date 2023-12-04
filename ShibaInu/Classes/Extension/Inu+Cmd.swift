@@ -23,7 +23,6 @@ public extension Inu where T == String {
         Command(
             path: "/bin/bash",
             args: ["-c", LANG + arg],
-            workSpace: workSpace
-        )
+            workSpace: workSpace)
     }
 }
